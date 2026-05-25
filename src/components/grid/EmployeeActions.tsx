@@ -12,7 +12,6 @@ interface Props {
 }
 
 export const EmployeeActions: React.FC<Props> = ({
-  employeeName,
 }) => {
   const [open, setOpen] =
     useState(false);

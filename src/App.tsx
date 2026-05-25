@@ -8,13 +8,6 @@ import { Employees } from './pages/Employees';
 
 import { Sidebar } from './components/layout/Sidebar';
 
-import {
-  Building2,
-  Briefcase,
-  BarChart3,
-  FileText,
-  Settings,
-} from 'lucide-react';
 
 import { PlaceholderPage } from './pages/PlaceholderPage';
 
