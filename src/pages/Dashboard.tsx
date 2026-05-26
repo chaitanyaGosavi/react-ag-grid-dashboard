@@ -16,15 +16,15 @@ export const Dashboard: React.FC =
       );
 
     return (
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-slate-900">
+            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
               Dashboard
             </h1>
 
-            <p className="text-slate-500 mt-2">
+            <p className="text-sm sm:text-base text-slate-500 mt-2">
               Workforce analytics,
               employee performance
               and operational

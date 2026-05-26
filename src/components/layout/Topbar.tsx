@@ -5,23 +5,27 @@ import {
   Menu,
 } from 'lucide-react';
 
-export const Topbar: React.FC = () => {
+interface TopbarProps {
+  onMenuClick?: () => void;
+}
+
+export const Topbar: React.FC<TopbarProps> = ({ onMenuClick }) => {
   return (
-    <header className="sticky top-0 z-40 bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg mb-8">
-      <div className="h-16 px-4 sm:px-6 flex items-center justify-between">
+    <header className="sticky top-0 z-30 bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg">
+      <div className="h-16 px-3 sm:px-4 md:px-6 flex items-center justify-between">
         {/* Left */}
         <div className="flex items-center gap-4">
           {/* Mobile menu button */}
-          <button className="lg:hidden p-2 rounded-lg hover:bg-white-100">
+          <button onClick={onMenuClick} className="lg:hidden p-2 rounded-lg hover:bg-blue-700">
             <Menu size={22} />
           </button>
 
           <div>
-            <h1 className="text-xl font-bold text-white-500">
+            <h1 className="text-lg sm:text-xl font-bold text-white">
               Employee Dashboard
             </h1>
 
-            <p className="text-sm text-slate-200 hidden sm:block">
+            <p className="text-xs sm:text-sm text-slate-200 hidden sm:block">
               Workforce analytics and management
             </p>
           </div>

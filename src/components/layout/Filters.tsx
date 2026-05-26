@@ -28,9 +28,9 @@ export const Filters: React.FC<FiltersProps> = ({
   locations,
 }) => {
   return (
-    <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-sm">
+    <div className="bg-white border border-slate-200 rounded-3xl p-3 sm:p-5 shadow-sm">
       {/* Top Row */}
-      <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
+      <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-3 sm:gap-4">
         {/* Left */}
         <div>
           <div className="flex items-center gap-2">
@@ -42,11 +42,11 @@ export const Filters: React.FC<FiltersProps> = ({
             </div>
 
             <div>
-              <h3 className="font-semibold text-slate-900">
+              <h3 className="text-sm sm:text-base font-semibold text-slate-900">
                 Employee Filters
               </h3>
 
-              <p className="text-sm text-slate-500">
+              <p className="text-xs sm:text-sm text-slate-500">
                 Filter employee records and analytics
               </p>
             </div>
@@ -56,7 +56,7 @@ export const Filters: React.FC<FiltersProps> = ({
         {/* Reset Button */}
         <button
           onClick={onReset}
-          className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 hover:bg-slate-100 transition text-slate-700 font-medium"
+          className="flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 rounded-xl border border-slate-200 hover:bg-slate-100 transition text-xs sm:text-sm text-slate-700 font-medium whitespace-nowrap"
         >
           <RotateCcw size={16} />
           Reset Filters
@@ -64,7 +64,7 @@ export const Filters: React.FC<FiltersProps> = ({
       </div>
 
       {/* Filters Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-5 gap-4 mt-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 mt-6">
         {/* Search */}
         <div className="relative 2xl:col-span-2">
           <Search

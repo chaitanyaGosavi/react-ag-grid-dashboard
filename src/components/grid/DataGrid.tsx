@@ -331,14 +331,14 @@ export const DataGrid: React.FC<
   return (
     <div className="bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden">
       {/* Toolbar */}
-      <div className="border-b border-slate-200 px-5 py-4 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+      <div className="border-b border-slate-200 px-3 sm:px-5 py-4 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         {/* Left */}
         <div>
-          <h3 className="text-lg font-semibold text-slate-900">
+          <h3 className="text-base sm:text-lg font-semibold text-slate-900">
             Employee Directory
           </h3>
 
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-xs sm:text-sm text-slate-500 mt-1">
             Manage and analyze
             employee records
           </p>
@@ -409,7 +409,7 @@ export const DataGrid: React.FC<
           className="ag-theme-quartz"
           style={
             {
-              height: '720px',
+              height: 'min(720px, calc(100vh - 400px))',
               width: '100%',
 
               '--ag-font-size':

@@ -34,7 +34,7 @@ export const KPICard: React.FC<KPICardProps> = ({
   const isPositive = change >= 0;
 
   return (
-    <div className="group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-6 shadow-sm hover:shadow-xl transition-all duration-300">
+    <div className="group relative overflow-hidden rounded-2xl sm:rounded-3xl bg-white border border-slate-200 p-4 sm:p-6 shadow-sm hover:shadow-xl transition-all duration-300">
       {/* Background Accent */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-slate-100 to-transparent rounded-full blur-3xl opacity-70" />
 
@@ -43,26 +43,26 @@ export const KPICard: React.FC<KPICardProps> = ({
         {/* Top Section */}
         <div className="flex items-start justify-between">
           <div>
-            <p className="text-sm font-medium text-slate-500">
+            <p className="text-xs sm:text-sm font-medium text-slate-500">
               {label}
             </p>
 
-            <h2 className="text-3xl font-bold text-slate-900 mt-3 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-2 sm:mt-3 tracking-tight">
               {displayValue}
             </h2>
           </div>
 
           <div
-            className={`w-14 h-14 rounded-2xl flex items-center justify-center text-white shadow-lg ${iconBg}`}
+            className={`w-12 sm:w-14 h-12 sm:h-14 rounded-2xl flex items-center justify-center text-white shadow-lg ${iconBg}`}
           >
             {icon}
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="flex items-center gap-2 mt-8">
+        <div className="flex items-center gap-2 mt-6 sm:mt-8">
           <div
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-sm font-semibold ${trendColor}`}
+            className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs sm:text-sm font-semibold ${trendColor}`}
           >
             {isPositive ? (
               <ArrowUpRight size={16} />
@@ -76,7 +76,7 @@ export const KPICard: React.FC<KPICardProps> = ({
             </span>
           </div>
 
-          <span className="text-sm text-slate-500">
+          <span className="text-xs sm:text-sm text-slate-500">
             vs last month
           </span>
         </div>
@@ -99,7 +99,7 @@ export const KPIGrid: React.FC<KPIGridProps> = ({
   activeEmployees,
 }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
       <KPICard
         label="Total Salary Budget"
         value={totalSalary}

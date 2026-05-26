@@ -69,7 +69,7 @@ export const Sidebar: React.FC<
   setActivePage,
 }) => {
   return (
-    <aside className="hidden lg:flex lg:w-64 xl:w-72 bg-slate-900 text-white flex-col min-h-screen sticky top-0 border-r border-slate-800">
+    <aside className="hidden lg:flex lg:w-64 xl:w-72 bg-slate-900 text-white flex-col h-screen sticky top-0 border-r border-slate-800">
       {/* Logo */}
       <div className="px-6 py-6 border-b border-slate-800">
         <div className="flex items-center gap-3">
@@ -90,7 +90,7 @@ export const Sidebar: React.FC<
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 px-4 py-6 overflow-y-auto">
+      <nav className="flex-1 px-4 py-6">
         {/* Section Label */}
         <div className="px-3 mb-3">
           <p className="text-xs uppercase tracking-wider text-slate-500 font-semibold">
@@ -140,19 +140,24 @@ export const Sidebar: React.FC<
         </div>
       </nav>
 
-      {/* Bottom User Card */}
+      {/* Bottom User Card - Made By */}
       <div className="p-4 border-t border-slate-800">
-        <div className="bg-slate-800 rounded-2xl p-4 flex items-center gap-3">
-          <div className="w-11 h-11 rounded-full bg-blue-600 flex items-center justify-center text-white font-semibold">
+        {/* Made By Label */}
+        <p className="text-xs uppercase tracking-widest text-slate-500 font-semibold mb-3 px-2">
+          Made by
+        </p>
+
+        <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-4 flex items-center gap-3 border border-slate-700 hover:border-blue-600 transition">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-semibold shadow-lg">
             CG
           </div>
 
           <div className="flex-1 min-w-0">
-            <h4 className="text-sm font-semibold truncate">
+            <h4 className="text-sm font-bold text-white truncate">
               Chaitanya Gosavi
             </h4>
 
-            <p className="text-xs text-slate-400 truncate">
+            <p className="text-xs text-blue-400 font-medium truncate">
               Frontend Developer
             </p>
           </div>

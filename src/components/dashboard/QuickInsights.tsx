@@ -77,13 +77,13 @@ export const QuickInsights: React.FC<
   ];
 
   return (
-    <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 h-full">
-      <div className="mb-6">
-        <h3 className="text-lg font-semibold text-slate-900">
+    <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-4 sm:p-6 h-full">
+      <div className="mb-4 sm:mb-6">
+        <h3 className="text-base sm:text-lg font-semibold text-slate-900">
           Quick Insights
         </h3>
 
-        <p className="text-sm text-slate-500 mt-1">
+        <p className="text-xs sm:text-sm text-slate-500 mt-1">
           Executive workforce
           overview and trends.
         </p>
@@ -101,28 +101,28 @@ export const QuickInsights: React.FC<
             return (
               <div
                 key={index}
-                className="flex items-start gap-4"
+                className="flex items-start gap-3 sm:gap-4"
               >
-                <div className="w-11 h-11 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
-                  <Icon size={20} />
+                <div className="w-10 sm:w-11 h-10 sm:h-11 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+                  <Icon size={18} />
                 </div>
 
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h4 className="font-medium text-slate-900">
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h4 className="font-medium text-slate-900 text-sm sm:text-base">
                       {
                         insight.title
                       }
                     </h4>
 
-                    <span className="text-sm font-semibold text-blue-600">
+                    <span className="text-xs sm:text-sm font-semibold text-blue-600">
                       {
                         insight.value
                       }
                     </span>
                   </div>
 
-                  <p className="text-sm text-slate-500 mt-1 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
                     {
                       insight.description
                     }

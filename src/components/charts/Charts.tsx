@@ -101,92 +101,92 @@ export const Charts: React.FC<ChartsProps> = ({
   return (
     <div className="space-y-6">
       {/* Stats Cards */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         {/* Avg Rating */}
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl sm:rounded-3xl p-3 sm:p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-slate-500">
+              <p className="text-xs sm:text-sm text-slate-500">
                 Avg Performance
               </p>
 
-              <h3 className="text-2xl font-bold text-slate-900 mt-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
                 {avgRating.toFixed(1)}
               </h3>
             </div>
 
-            <div className="w-12 h-12 rounded-xl bg-violet-100 text-violet-700 flex items-center justify-center">
-              <TrendingUp size={22} />
+            <div className="w-11 sm:w-12 h-11 sm:h-12 rounded-xl bg-violet-100 text-violet-700 flex items-center justify-center flex-shrink-0">
+              <TrendingUp size={20} />
             </div>
           </div>
         </div>
 
         {/* Employees */}
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl sm:rounded-3xl p-3 sm:p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-slate-500">
+              <p className="text-xs sm:text-sm text-slate-500">
                 Total Employees
               </p>
 
-              <h3 className="text-2xl font-bold text-slate-900 mt-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
                 {data.length}
               </h3>
             </div>
 
-            <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center">
-              <Users size={22} />
+            <div className="w-11 sm:w-12 h-11 sm:h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center flex-shrink-0">
+              <Users size={20} />
             </div>
           </div>
         </div>
 
         {/* Departments */}
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl sm:rounded-3xl p-3 sm:p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-slate-500">
+              <p className="text-xs sm:text-sm text-slate-500">
                 Departments
               </p>
 
-              <h3 className="text-2xl font-bold text-slate-900 mt-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
                 {departmentData.length}
               </h3>
             </div>
 
-            <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
-              <Building2 size={22} />
+            <div className="w-11 sm:w-12 h-11 sm:h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
+              <Building2 size={20} />
             </div>
           </div>
         </div>
 
         {/* Locations */}
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl sm:rounded-3xl p-3 sm:p-4">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-slate-500">
+              <p className="text-xs sm:text-sm text-slate-500">
                 Locations
               </p>
 
-              <h3 className="text-2xl font-bold text-slate-900 mt-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
                 {locationCount}
               </h3>
             </div>
 
-            <div className="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center">
-              <MapPin size={22} />
+            <div className="w-11 sm:w-12 h-11 sm:h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center flex-shrink-0">
+              <MapPin size={20} />
             </div>
           </div>
         </div>
       </div>
 
       {/* Employee Status */}
-      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
-        <div className="mb-4">
-          <h3 className="font-semibold text-slate-900">
+      <div className="bg-slate-50 border border-slate-200 rounded-2xl sm:rounded-3xl p-4 sm:p-5">
+        <div className="mb-3 sm:mb-4">
+          <h3 className="text-base sm:text-lg font-semibold text-slate-900">
             Employee Status
           </h3>
 
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-xs sm:text-sm text-slate-500 mt-1">
             Active vs inactive employees
           </p>
         </div>
@@ -250,13 +250,13 @@ export const Charts: React.FC<ChartsProps> = ({
       </div>
 
       {/* Department Distribution */}
-      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
-        <div className="mb-4">
-          <h3 className="font-semibold text-slate-900">
+      <div className="bg-slate-50 border border-slate-200 rounded-2xl sm:rounded-3xl p-4 sm:p-5">
+        <div className="mb-3 sm:mb-4">
+          <h3 className="text-base sm:text-lg font-semibold text-slate-900">
             Department Distribution
           </h3>
 
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-xs sm:text-sm text-slate-500 mt-1">
             Employees per department
           </p>
         </div>

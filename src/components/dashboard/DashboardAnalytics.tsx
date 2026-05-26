@@ -25,14 +25,14 @@ export const DashboardAnalytics: React.FC<
   totalProjects,
 }) => {
   return (
-    <div className="grid grid-cols-1 2xl:grid-cols-12 gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       {/* Charts */}
-      <div className="2xl:col-span-8">
+      <div className="lg:col-span-8">
         <Charts data={data} />
       </div>
 
       {/* Insights */}
-      <div className="2xl:col-span-4">
+      <div className="lg:col-span-4">
         <QuickInsights
           activeEmployees={
             activeEmployees
